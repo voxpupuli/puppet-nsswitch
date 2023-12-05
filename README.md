@@ -1,9 +1,17 @@
 # nsswitch.conf module for Puppet
-[![Build Status](https://travis-ci.org/trlinkin/puppet-nsswitch.svg?branch=master)](https://travis-ci.org/trlinkin/puppet-nsswitch)
+
+[![License](https://img.shields.io/github/license/voxpupuli/puppet-nsswitch.svg)](https://github.com/voxpupuli/puppet-nsswitch/blob/master/LICENSE)
+[![CI Status](https://github.com/voxpupuli/puppet-nsswitch/workflows/CI/badge.svg?branch=master)]((https://github.com/voxpupuli/puppet-nsswitch/workflows/CI/badge.svg?branch=master))
+[![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/nsswitch.svg)](https://forge.puppetlabs.com/puppet/nsswitch)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/puppet/nsswitch.svg)](https://forge.puppetlabs.com/puppet/nsswitch)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/nsswitch.svg)](https://forge.puppetlabs.com/puppet/nsswitch)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/puppet/nsswitch.svg)](https://forge.puppetlabs.com/puppet/nsswitch)
 
 A way of expressing nsswitch.conf configurations declaratively. This
 should manage the standard 15 databases NSS supports, plus the `sudo` entry
 respected by sudo since the 1.7.0 release.
+
+This module is based on the work from [trlinkin-nsswitch](https://forge.puppet.com/modules/trlinkin/nsswitch/readme)
 
 ### Defaults
 
