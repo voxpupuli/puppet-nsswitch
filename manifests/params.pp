@@ -13,7 +13,7 @@ class nsswitch::params {
 
         $services_default   = ['files','sss']
         $netgroup_default   = ['files','sss']
-      }else{
+      } else {
         $passwd_default     = ['files']
         $shadow_default     = ['files']
         $group_default      = ['files']
@@ -45,9 +45,7 @@ class nsswitch::params {
       $file_group         = 'root'
       $group_default      = ['files']
       $gshadow_default    = undef
-      $hosts_default      = ['files',
-      'mdns4_minimal [NOTFOUND=return]',
-      'dns']
+      $hosts_default      = ['files', 'mdns4_minimal [NOTFOUND=return]', 'dns']
       $netgroup_default   = ['nisplus']
       $netmasks_default   = ['files']
       $networks_default   = ['files']
