@@ -5,24 +5,12 @@
 class nsswitch::params {
   case $facts['os']['name'] {
     /AlmaLinux|CentOS|RedHat|Rocky|Amazon|OEL|OracleLinux|Scientific|CloudLinux/: {
-      if versioncmp($facts['os']['release']['major'], '6') > 0 {
-        $passwd_default     = ['files','sss']
-        $shadow_default     = ['files','sss']
-        $group_default      = ['files','sss']
-        $automount_default  = ['files']
-
-        $services_default   = ['files','sss']
-        $netgroup_default   = ['files','sss']
-      } else {
-        $passwd_default     = ['files']
-        $shadow_default     = ['files']
-        $group_default      = ['files']
-        $automount_default  = ['files','nisplus']
-
-        $services_default   = ['files']
-        $netgroup_default   = ['nisplus']
-      }
-
+      $passwd_default     = ['files','sss']
+      $shadow_default     = ['files','sss']
+      $group_default      = ['files','sss']
+      $automount_default  = ['files']
+      $services_default   = ['files','sss']
+      $netgroup_default   = ['files','sss']
       $aliases_default    = ['files','nisplus']
       $bootparams_default = ['nisplus [NOTFOUND=return]','files']
       $ethers_default     = ['files']
