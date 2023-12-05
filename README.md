@@ -5,13 +5,6 @@ A way of expressing nsswitch.conf configurations declaratively. This
 should manage the standard 15 databases NSS supports, plus the `sudo` entry
 respected by sudo since the 1.7.0 release.
 
-### Updated for Puppet 4 - No Puppet 3 Compatibility
-
-The 2.x series of this module officially adopts the Puppet 4 parser syntax and
-other new Puppet features. The 2.x series will no longer work with Puppet 3 or
-earlier. One benefit is the removal of dependency the `trlinkin-validate_multi`
-module.
-
 ### Defaults
 
 Currently this module has support for EL based Linux distributions,
