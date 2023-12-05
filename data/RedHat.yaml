@@ -34,5 +34,5 @@ nsswitch::protocols:
   - files
 nsswitch::publickey:
   - nisplus
-nsswitch::rpc_default:
+nsswitch::rpc:
   - files
