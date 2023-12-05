@@ -7,9 +7,6 @@
 ### Classes
 
 * [`nsswitch`](#nsswitch): Manages the system nsswitch.conf configuration
-* [`nsswitch::params`](#nsswitch--params): nsswitch::params class
-Provides default values for the nsswitch module according to the
-operatingsystem being used.
 
 ## Classes
 
@@ -43,9 +40,6 @@ The following parameters are available in the `nsswitch` class:
 * [`automount`](#-nsswitch--automount)
 * [`bootparams`](#-nsswitch--bootparams)
 * [`ethers`](#-nsswitch--ethers)
-* [`file_group`](#-nsswitch--file_group)
-* [`file_owner`](#-nsswitch--file_owner)
-* [`file_perms`](#-nsswitch--file_perms)
 * [`group`](#-nsswitch--group)
 * [`gshadow`](#-nsswitch--gshadow)
 * [`hosts`](#-nsswitch--hosts)
@@ -61,6 +55,9 @@ The following parameters are available in the `nsswitch` class:
 * [`shells`](#-nsswitch--shells)
 * [`sudoers`](#-nsswitch--sudoers)
 * [`file_path`](#-nsswitch--file_path)
+* [`file_group`](#-nsswitch--file_group)
+* [`file_owner`](#-nsswitch--file_owner)
+* [`file_perms`](#-nsswitch--file_perms)
 
 ##### <a name="-nsswitch--aliases"></a>`aliases`
 
@@ -68,7 +65,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Mail aliases, used by getaliasent() and related functions.
 
-Default value: `$nsswitch::params::aliases_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--automount"></a>`automount`
 
@@ -76,7 +73,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Which conventions to use for automounting of homes.
 
-Default value: `$nsswitch::params::automount_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--bootparams"></a>`bootparams`
 
@@ -85,7 +82,7 @@ Data type: `Optional[Variant[String, Array]]`
 Where bootparams shall be supplied from (e.g. for diskless clients at boot
 time using rpc.bootparamd).
 
-Default value: `$nsswitch::params::bootparams_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--ethers"></a>`ethers`
 
@@ -93,31 +90,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Ethernet numbers.
 
-Default value: `$nsswitch::params::ethers_default`
-
-##### <a name="-nsswitch--file_group"></a>`file_group`
-
-Data type: `Optional[Variant[String]]`
-
-Group of the nsswitch.conf file
-
-Default value: `$nsswitch::params::file_group`
-
-##### <a name="-nsswitch--file_owner"></a>`file_owner`
-
-Data type: `Variant[String]`
-
-Owner of the nsswitch.conf file
-
-Default value: `'root'`
-
-##### <a name="-nsswitch--file_perms"></a>`file_perms`
-
-Data type: `Variant[String]`
-
-Permissions for the nsswitch.conf file
-
-Default value: `'0644'`
+Default value: `undef`
 
 ##### <a name="-nsswitch--group"></a>`group`
 
@@ -125,7 +98,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Groups of users, used by getgrent() and related functions.
 
-Default value: `$nsswitch::params::group_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--gshadow"></a>`gshadow`
 
@@ -133,7 +106,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Shadow groups, used by getspnam() and related functions.
 
-Default value: `$nsswitch::params::gshadow_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--hosts"></a>`hosts`
 
@@ -141,7 +114,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Host names and numbers, used by gethostbyname() and related functions.
 
-Default value: `$nsswitch::params::hosts_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--netgroup"></a>`netgroup`
 
@@ -149,7 +122,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Network-wide list of hosts and users, used for access rules.
 
-Default value: `$nsswitch::params::netgroup_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--netmasks"></a>`netmasks`
 
@@ -158,7 +131,7 @@ Data type: `Optional[Variant[String, Array]]`
 Netmasks specify how much of the address to reserve for sub-dividing
 networks into subnetworks.
 
-Default value: `$nsswitch::params::netmasks_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--networks"></a>`networks`
 
@@ -166,7 +139,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Network names and numbers, used by getnetent() and related functions.
 
-Default value: `$nsswitch::params::networks_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--passwd"></a>`passwd`
 
@@ -174,7 +147,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 User passwords, used by getpwent() and related functions.
 
-Default value: `$nsswitch::params::passwd_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--protocols"></a>`protocols`
 
@@ -182,7 +155,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Network protocols, used by getprotoent() and related functions.
 
-Default value: `$nsswitch::params::protocols_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--publickey"></a>`publickey`
 
@@ -190,7 +163,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Public and secret keys for Secure_RPC used by NFS and NIS+.
 
-Default value: `$nsswitch::params::publickey_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--rpc"></a>`rpc`
 
@@ -199,7 +172,7 @@ Data type: `Optional[Variant[String, Array]]`
 Remote procedure call names and numbers, used by getrpcbyname() and related
 functions.
 
-Default value: `$nsswitch::params::rpc_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--services"></a>`services`
 
@@ -207,7 +180,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Network services, used by getservent() and related functions.
 
-Default value: `$nsswitch::params::services_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--shadow"></a>`shadow`
 
@@ -215,7 +188,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Shadow user passwords, used by getspnam() and related functions.
 
-Default value: `$nsswitch::params::shadow_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--shells"></a>`shells`
 
@@ -223,7 +196,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Valid user shells, used by getusershell() and related functions.
 
-Default value: `$nsswitch::params::shells_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--sudoers"></a>`sudoers`
 
@@ -231,7 +204,7 @@ Data type: `Optional[Variant[String, Array]]`
 
 Sudoers policy module users.
 
-Default value: `$nsswitch::params::sudoers_default`
+Default value: `undef`
 
 ##### <a name="-nsswitch--file_path"></a>`file_path`
 
@@ -241,9 +214,27 @@ The path to `nsswitch.conf` on the system.
 
 Default value: `'/etc/nsswitch.conf'`
 
-### <a name="nsswitch--params"></a>`nsswitch::params`
+##### <a name="-nsswitch--file_group"></a>`file_group`
 
-nsswitch::params class
-Provides default values for the nsswitch module according to the
-operatingsystem being used.
+Data type: `String[1]`
+
+Group of the nsswitch.conf file
+
+Default value: `'root'`
+
+##### <a name="-nsswitch--file_owner"></a>`file_owner`
+
+Data type: `String[1]`
+
+Owner of the nsswitch.conf file
+
+Default value: `'root'`
+
+##### <a name="-nsswitch--file_perms"></a>`file_perms`
+
+Data type: `Stdlib::Filemode`
+
+Permissions for the nsswitch.conf file
+
+Default value: `'0644'`
 
