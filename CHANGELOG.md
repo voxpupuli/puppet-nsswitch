@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.1.0](https://github.com/voxpupuli/puppet-nsswitch/tree/v3.1.0) (2024-02-05)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-nsswitch/compare/v3.0.0...v3.1.0)
+
+**Implemented enhancements:**
+
+- Add Ubuntu 22.04 support [\#10](https://github.com/voxpupuli/puppet-nsswitch/pull/10) ([threepistons](https://github.com/threepistons))
+
 ## [v3.0.0](https://github.com/voxpupuli/puppet-nsswitch/tree/v3.0.0) (2023-12-05)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-nsswitch/compare/aad76c5da4b95e53268bd2f6b23cf477aba3d0ef...v3.0.0)
