@@ -54,6 +54,7 @@ The following parameters are available in the `nsswitch` class:
 * [`shadow`](#-nsswitch--shadow)
 * [`shells`](#-nsswitch--shells)
 * [`sudoers`](#-nsswitch--sudoers)
+* [`subid`](#-nsswitch--subid)
 * [`file_path`](#-nsswitch--file_path)
 * [`file_group`](#-nsswitch--file_group)
 * [`file_owner`](#-nsswitch--file_owner)
@@ -61,7 +62,7 @@ The following parameters are available in the `nsswitch` class:
 
 ##### <a name="-nsswitch--aliases"></a>`aliases`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Mail aliases, used by getaliasent() and related functions.
 
@@ -69,7 +70,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--automount"></a>`automount`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Which conventions to use for automounting of homes.
 
@@ -77,7 +78,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--bootparams"></a>`bootparams`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Where bootparams shall be supplied from (e.g. for diskless clients at boot
 time using rpc.bootparamd).
@@ -86,7 +87,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--ethers"></a>`ethers`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Ethernet numbers.
 
@@ -94,7 +95,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--group"></a>`group`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Groups of users, used by getgrent() and related functions.
 
@@ -102,7 +103,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--gshadow"></a>`gshadow`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Shadow groups, used by getspnam() and related functions.
 
@@ -110,7 +111,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--hosts"></a>`hosts`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Host names and numbers, used by gethostbyname() and related functions.
 
@@ -118,7 +119,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--netgroup"></a>`netgroup`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Network-wide list of hosts and users, used for access rules.
 
@@ -126,7 +127,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--netmasks"></a>`netmasks`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Netmasks specify how much of the address to reserve for sub-dividing
 networks into subnetworks.
@@ -135,7 +136,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--networks"></a>`networks`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Network names and numbers, used by getnetent() and related functions.
 
@@ -143,7 +144,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--passwd"></a>`passwd`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 User passwords, used by getpwent() and related functions.
 
@@ -151,7 +152,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--protocols"></a>`protocols`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Network protocols, used by getprotoent() and related functions.
 
@@ -159,7 +160,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--publickey"></a>`publickey`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Public and secret keys for Secure_RPC used by NFS and NIS+.
 
@@ -167,7 +168,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--rpc"></a>`rpc`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Remote procedure call names and numbers, used by getrpcbyname() and related
 functions.
@@ -176,7 +177,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--services"></a>`services`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Network services, used by getservent() and related functions.
 
@@ -184,7 +185,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--shadow"></a>`shadow`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Shadow user passwords, used by getspnam() and related functions.
 
@@ -192,7 +193,7 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--shells"></a>`shells`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Valid user shells, used by getusershell() and related functions.
 
@@ -200,9 +201,17 @@ Default value: `undef`
 
 ##### <a name="-nsswitch--sudoers"></a>`sudoers`
 
-Data type: `Optional[Variant[String, Array]]`
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 Sudoers policy module users.
+
+Default value: `undef`
+
+##### <a name="-nsswitch--subid"></a>`subid`
+
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
+
+subuid and subgid mapping
 
 Default value: `undef`
 

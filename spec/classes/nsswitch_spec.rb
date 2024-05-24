@@ -30,6 +30,7 @@ describe 'nsswitch' do
             services: 'foo',
             shadow: 'foo',
             sudoers: 'foo',
+            subid: 'foo',
           }
         end
 
@@ -55,6 +56,7 @@ describe 'nsswitch' do
             services: ['foo'],
             shadow: ['foo'],
             sudoers: ['foo'],
+            subid: ['foo'],
           }
         end
 

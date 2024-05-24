@@ -71,6 +71,9 @@
 # @param sudoers
 #   Sudoers policy module users.
 #
+# @param subid
+#   subuid and subgid mapping
+#
 # @param file_path
 #   The path to `nsswitch.conf` on the system.
 #
@@ -84,24 +87,25 @@
 #   Permissions for the nsswitch.conf file
 #
 class nsswitch (
-  Optional[Variant[String, Array]] $aliases    = undef,
-  Optional[Variant[String, Array]] $automount  = undef,
-  Optional[Variant[String, Array]] $bootparams = undef,
-  Optional[Variant[String, Array]] $ethers     = undef,
-  Optional[Variant[String, Array]] $group      = undef,
-  Optional[Variant[String, Array]] $hosts      = undef,
-  Optional[Variant[String, Array]] $netgroup   = undef,
-  Optional[Variant[String, Array]] $netmasks   = undef,
-  Optional[Variant[String, Array]] $networks   = undef,
-  Optional[Variant[String, Array]] $passwd     = undef,
-  Optional[Variant[String, Array]] $protocols  = undef,
-  Optional[Variant[String, Array]] $publickey  = undef,
-  Optional[Variant[String, Array]] $rpc        = undef,
-  Optional[Variant[String, Array]] $services   = undef,
-  Optional[Variant[String, Array]] $shadow     = undef,
-  Optional[Variant[String, Array]] $shells     = undef,
-  Optional[Variant[String, Array]] $gshadow    = undef,
-  Optional[Variant[String, Array]] $sudoers    = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $aliases    = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $automount  = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $bootparams = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $ethers     = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $group      = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $hosts      = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $netgroup   = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $netmasks   = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $networks   = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $passwd     = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $protocols  = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $publickey  = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $rpc        = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $services   = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $shadow     = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $shells     = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $gshadow    = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $sudoers    = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $subid      = undef,
   Stdlib::Unixpath $file_path  = '/etc/nsswitch.conf',
   String[1] $file_group = 'root',
   String[1] $file_owner = 'root',
@@ -132,6 +136,7 @@ class nsswitch (
         'shells'     => $shells,
         'gshadow'    => $gshadow,
         'sudoers'    => $sudoers,
+        'subid'      => $subid,
     }),
   }
 }
