@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
-## [v3.1.0](https://github.com/voxpupuli/puppet-nsswitch/tree/v3.1.0) (2024-02-05)
+## [v3.2.0](https://github.com/voxpupuli/puppet-nsswitch/tree/v3.2.0) (2024-05-24)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-nsswitch/compare/v3.1.0...v3.2.0)
+
+**Implemented enhancements:**
+
+- Support subid [\#16](https://github.com/voxpupuli/puppet-nsswitch/pull/16) ([treydock](https://github.com/treydock))
+
+## [v3.1.0](https://github.com/voxpupuli/puppet-nsswitch/tree/v3.1.0) (2024-02-06)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-nsswitch/compare/v3.0.0...v3.1.0)
 
