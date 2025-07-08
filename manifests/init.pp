@@ -117,7 +117,8 @@ class nsswitch (
     owner   => $file_owner,
     group   => $file_group,
     mode    => $file_perms,
-    content => epp('nsswitch/nsswitch.conf.epp', {
+    content => epp("${module_name}/nsswitch.conf.epp",
+      {
         'aliases'    => $aliases,
         'automount'  => $automount,
         'bootparams' => $bootparams,
@@ -137,6 +138,7 @@ class nsswitch (
         'gshadow'    => $gshadow,
         'sudoers'    => $sudoers,
         'subid'      => $subid,
-    }),
+      },
+    ),
   }
 }
