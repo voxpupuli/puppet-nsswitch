@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v4.0.0](https://github.com/voxpupuli/puppet-nsswitch/tree/v4.0.0) (2025-12-09)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-nsswitch/compare/v3.2.0...v4.0.0)
+
+**Breaking changes:**
+
+- Drop puppet, update openvox minimum version to 8.19 [\#28](https://github.com/voxpupuli/puppet-nsswitch/pull/28) ([TheMeier](https://github.com/TheMeier))
+- Drop EOL operating systems EL 7, CentOS 8, Ubuntu 20.04 [\#26](https://github.com/voxpupuli/puppet-nsswitch/pull/26) ([kenyon](https://github.com/kenyon))
+
+**Implemented enhancements:**
+
+- Add support for `initgroups` [\#33](https://github.com/voxpupuli/puppet-nsswitch/issues/33)
+- metadata.json: Add OpenVox [\#23](https://github.com/voxpupuli/puppet-nsswitch/pull/23) ([jstraw](https://github.com/jstraw))
+
+**Merged pull requests:**
+
+- Add support for `initgroups` [\#35](https://github.com/voxpupuli/puppet-nsswitch/pull/35) ([issmarckri](https://github.com/issmarckri))
+
 ## [v3.2.0](https://github.com/voxpupuli/puppet-nsswitch/tree/v3.2.0) (2024-05-24)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-nsswitch/compare/v3.1.0...v3.2.0)
