@@ -31,6 +31,7 @@ describe 'nsswitch' do
             shadow: 'foo',
             sudoers: 'foo',
             subid: 'foo',
+            initgroups: 'foo',
           }
         end
 
@@ -57,6 +58,7 @@ describe 'nsswitch' do
             shadow: ['foo'],
             sudoers: ['foo'],
             subid: ['foo'],
+            initgroups: ['foo'],
           }
         end
 

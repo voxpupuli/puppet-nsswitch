@@ -18,6 +18,7 @@
   Optional[Variant[String, Array]] $gshadow,
   Optional[Variant[String, Array]] $sudoers,
   Optional[Variant[String, Array]] $subid,
+  Optional[Variant[String, Array]] $initgroups,
 | -%>
 # This file is controlled by Puppet
 
@@ -77,4 +78,7 @@ shells:    <%= [*$shells].join(" ") %>
 <% } -%>
 <% if $subid { -%>
 subid:     <%= [*$subid].join(" ") %>
+<% } -%>
+<% if $initgroups { -%>
+initgroups: <%= [*$initgroups].join(" ") %>
 <% } -%>

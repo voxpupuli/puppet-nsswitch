@@ -74,6 +74,9 @@
 # @param subid
 #   subuid and subgid mapping
 #
+# @param initgroups
+#   Supplementary group access list, used by getgrouplist() and related functions.
+#
 # @param file_path
 #   The path to `nsswitch.conf` on the system.
 #
@@ -106,6 +109,7 @@ class nsswitch (
   Optional[Variant[String[1], Array[String[1]]]] $gshadow    = undef,
   Optional[Variant[String[1], Array[String[1]]]] $sudoers    = undef,
   Optional[Variant[String[1], Array[String[1]]]] $subid      = undef,
+  Optional[Variant[String[1], Array[String[1]]]] $initgroups = undef,
   Stdlib::Unixpath $file_path  = '/etc/nsswitch.conf',
   String[1] $file_group = 'root',
   String[1] $file_owner = 'root',
@@ -138,6 +142,7 @@ class nsswitch (
         'gshadow'    => $gshadow,
         'sudoers'    => $sudoers,
         'subid'      => $subid,
+        'initgroups' => $initgroups,
       },
     ),
   }
