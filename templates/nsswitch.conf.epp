@@ -78,3 +78,6 @@ shells:    <%= [*$shells].join(" ") %>
 <% if $subid { -%>
 subid:     <%= [*$subid].join(" ") %>
 <% } -%>
+<% if $initgroups { -%>
+initgroups: <%= [*$initgroups].join(" ") %>
+<% } -%>
