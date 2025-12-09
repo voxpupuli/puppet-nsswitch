@@ -49,6 +49,7 @@ Available parameters are:
 * services
 * shells
 * sudo
+* initgroups
 
 
 For more information on NSS, please see the man pages. `man 5 nsswitch.conf`

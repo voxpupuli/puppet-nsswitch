@@ -55,6 +55,7 @@ The following parameters are available in the `nsswitch` class:
 * [`shells`](#-nsswitch--shells)
 * [`sudoers`](#-nsswitch--sudoers)
 * [`subid`](#-nsswitch--subid)
+* [`initgroups`](#-nsswitch--initgroups)
 * [`file_path`](#-nsswitch--file_path)
 * [`file_group`](#-nsswitch--file_group)
 * [`file_owner`](#-nsswitch--file_owner)
@@ -212,6 +213,14 @@ Default value: `undef`
 Data type: `Optional[Variant[String[1], Array[String[1]]]]`
 
 subuid and subgid mapping
+
+Default value: `undef`
+
+##### <a name="-nsswitch--initgroups"></a>`initgroups`
+
+Data type: `Optional[Variant[String[1], Array[String[1]]]]`
+
+Supplementary group access list, used by getgrouplist(3)
 
 Default value: `undef`
 
