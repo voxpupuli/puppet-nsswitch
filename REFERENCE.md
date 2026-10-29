@@ -255,4 +255,3 @@ Data type: `Stdlib::Filemode`
 Permissions for the nsswitch.conf file
 
 Default value: `'0644'`
-
